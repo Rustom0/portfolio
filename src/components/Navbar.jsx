@@ -19,6 +19,14 @@ export default function Navbar({ onNavigate, selected }){
             </button>
           ))}
         </nav>
+        <div className="flex md:hidden">
+          <button
+            onClick={() => onNavigate('contact')}
+            className="btn text-sm px-3 py-1"
+            >
+            Contact
+          </button>
+        </div>
       </div>
       <div>
         <button className="btn" onClick={()=>onNavigate('projects')}>Set Sail — View Crew</button>
