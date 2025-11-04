@@ -1,0 +1,1 @@
+Place images (ship, islands, screenshots) in this folder and update components to use them.
