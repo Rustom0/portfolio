@@ -19,10 +19,10 @@ export default function Navbar({ onNavigate, selected }){
             </button>
           ))}
         </nav>
-        <div className="flex md:hidden">
+        <div className="flex md:hidden justify-center flex-1">
           <button
             onClick={() => onNavigate('contact')}
-            className="btn text-sm px-3 py-1"
+            className="btn text-xs sm:text-sm px-3 py-1 scale-90 sm:scale-100"
             >
             Contact
           </button>
