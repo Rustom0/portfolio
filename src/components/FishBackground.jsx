@@ -58,29 +58,29 @@ export default function FishBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         {/* 🐟 Animated Fishes moving freely*/}
-      {fishes.map((_, i) => (
+      {fishes.map((_, i) => 
+      (
         <motion.div
-          key={i}
-          className="absolute text-xl sm:text-2xl opacity-70"
-          initial={{
-            x: -100,
+            key={i}
+            className="absolute text-xl sm:text-2xl opacity-70"
+            initial={{
+            x: window.innerWidth + 100, // start off-screen right
             y: Math.random() * window.innerHeight,
-          }}
-          animate={{
-            x: window.innerWidth + 100,
+            }}
+            animate={{
+            x: -100, // move to off-screen left
             y: Math.random() * window.innerHeight,
-            rotate: 5,
-          }}
-          transition={{
-            duration: 10 + Math.random() * 10,
+            }}
+            transition={{
+            duration: 10 + Math.random() * 10, // random speed for each fish
             repeat: Infinity,
             ease: "linear",
             delay: i * 1.5,
-          }}
+            }}
         >
-          🐟
+            🐟
         </motion.div>
-      ))}
+     ))}
       {/* 🐠 Animated Fish */}
       {fishData.map((fish, i) => (
         <motion.div
