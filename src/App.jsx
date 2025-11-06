@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import MapView from './components/MapView'
 import Navbar from './components/Navbar'
 import data from './data'
+import FishBackground from './components/FishBackground'
 
 export default function App(){
   const [selected, setSelected] = useState('home')
@@ -14,6 +15,7 @@ export default function App(){
 
   return (
     <div className="min-h-screen flex flex-col">
+      <FishBackground />
       <Navbar onNavigate={setSelected} selected={selected} />
       <main className="flex-1 p-6 max-w-6xl mx-auto w-full">
         <AnimatePresence mode="wait">
